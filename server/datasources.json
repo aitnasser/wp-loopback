@@ -1,0 +1,111 @@
+{
+	"db": {
+		"host": "localhost",
+		"port": 27017,
+		"database": "wp-db",
+		"name": "db",
+		"connector": "mongodb"
+	},
+	"WordpressService": {
+		"name": "WordpressService",
+		"connector": "rest",
+		"remotingEnabled": "true",
+		"operations": [{
+			"template": {
+				"method": "GET",
+				"url": "http://wordpress.issouka.com/wp-json/posts",
+				"headers": {
+					"accepts": "application/json",
+					"content-type": "application/json"
+				},
+				"query": {
+					"filter": "{filter}"
+				}
+			},
+			"functions": {
+				"find": ["filter"]
+			}
+		},
+		{
+			"template": {
+				"method": "GET",
+				"url": "http://wordpress.issouka.com/wp-json/posts/{id}",
+				"headers": {
+					"accepts": "application/json",
+					"content-type": "application/json"
+				},
+				"path": {
+					"id": "{id}"
+				},
+				"query": {
+					"filter": "{filter}"
+				}
+			},
+			"functions": {
+				"findById": ["id",
+				"filter"]
+			}
+		},
+		{
+			"template": {
+				"method": "GET",
+				"url": "http://wordpress.issouka.com/wp-json/posts/{id}",
+				"headers": {
+					"accepts": "application/json",
+					"content-type": "application/json"
+				},
+				"path": {
+					"id": "{id}"
+				},
+				"query": {
+					"filter": "{filter}"
+				}
+			},
+			"functions": {
+				"findOne": ["id",
+				"filter"]
+			}
+		},
+		{
+			"template": {
+				"method": "DELETE",
+				"url": "http://wordpress.issouka.com/wp-json/posts/{id}",
+				"query": {
+					"access_token": "{access_token}"
+				}
+			},
+			"functions": {
+				"deleteById": ["id",
+				"access_token"]
+			}
+		},
+		{
+			"template": {
+				"method": "POST",
+				"url": "http://wordpress.issouka.com/wp-json/posts",
+				"headers": {
+					"accepts": "application/json",
+					"content-type": "application/json"
+				},
+				"query": {
+					"access_token": "{access_token}"
+				},
+				"body": {
+					"ID": "{ID}",
+					"title": "{title}",
+					"type": "{type}",
+					"status": "{status}",
+					"content": "{content}"
+				}
+			},
+			"functions": {
+				"create": ["ID",
+				"title",
+				"type",
+				"status",
+				"content",
+				"access_token"]
+			}
+		}]
+	}
+}

@@ -1,0 +1,28 @@
+{
+  "name": "post",
+  "base": "PersistedModel",
+  "strict": false,
+  "idInjection": false,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "ID": {
+      "type": "string"      
+    },
+    "title": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "content": {
+      "type": "string"
+    }
+
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": []
+}
