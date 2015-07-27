@@ -4,8 +4,11 @@
 This is a client for the WordPress REST API. It is under active development, and should be considered as source of inspiration. More features are in development, and issues are welcome if you find something that doesn't work, or  if you have any suggestions .
 
 ##**Installation**
-
-      npm install
+      
+      change "WordpressUrl" value with the  correct  url in datasources.json
+     
+      
+       npm install
       
 
 ##**Running**
