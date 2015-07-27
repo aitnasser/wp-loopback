@@ -13,7 +13,7 @@
 		"operations": [{
 			"template": {
 				"method": "GET",
-				"url": "http://wordpress.issouka.com/wp-json/posts",
+				"url": "http://WordpressUrl/wp-json/posts",
 				"headers": {
 					"accepts": "application/json",
 					"content-type": "application/json"
@@ -29,7 +29,7 @@
 		{
 			"template": {
 				"method": "GET",
-				"url": "http://wordpress.issouka.com/wp-json/posts/{id}",
+				"url": "http://WordpressUrl/wp-json/posts/{id}",
 				"headers": {
 					"accepts": "application/json",
 					"content-type": "application/json"
@@ -49,7 +49,7 @@
 		{
 			"template": {
 				"method": "GET",
-				"url": "http://wordpress.issouka.com/wp-json/posts/{id}",
+				"url": "http://WordpressUrl/wp-json/posts/{id}",
 				"headers": {
 					"accepts": "application/json",
 					"content-type": "application/json"
@@ -69,7 +69,7 @@
 		{
 			"template": {
 				"method": "DELETE",
-				"url": "http://wordpress.issouka.com/wp-json/posts/{id}",
+				"url": "http://WordpressUrl/wp-json/posts/{id}",
 				"query": {
 					"access_token": "{access_token}"
 				}
@@ -82,7 +82,7 @@
 		{
 			"template": {
 				"method": "POST",
-				"url": "http://wordpress.issouka.com/wp-json/posts",
+				"url": "http://WordpressUrl/wp-json/posts",
 				"headers": {
 					"accepts": "application/json",
 					"content-type": "application/json"
